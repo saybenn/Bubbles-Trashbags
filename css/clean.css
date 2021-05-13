@@ -92,6 +92,7 @@
 
 body {
   font-family: 'Lato', Helvetica, sans-serif;
+  background: var(--false-white);
 }
 
 * {
@@ -137,6 +138,10 @@ header .top-fly .brand {
           align-items: center;
   background: var(--medium-blue);
   color: white;
+}
+
+header .top-fly .brand .telly {
+  display: none;
 }
 
 header .top-fly .brand .menu-wrap {
@@ -384,7 +389,6 @@ footer .right-footer a:first-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden;
 }
 
 .landing-right h1 {
@@ -458,9 +462,14 @@ footer .right-footer a:first-child {
 }
 
 article {
+  width: 100%;
+  height: 100%;
+}
+
+article .intro {
   height: 29vh;
   width: 80vw;
-  margin: 0 auto;
+  margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,7 +488,7 @@ article {
   font-family: 'Lato', sans-serif;
 }
 
-article i {
+article .intro i {
   background: var(--light-blue);
   border-radius: 50%;
   padding: 5px;
@@ -753,8 +762,7 @@ article i {
 }
 
 .contact-content .contact-left form {
-  width: 75%;
-  padding: 20px 30px;
+  width: 100%;
 }
 
 .contact-content .contact-left .row {
@@ -848,18 +856,28 @@ article i {
   header .nav-bar, header .call, header .brand img {
     display: none;
   }
-  header .brand h1 {
-    text-align: center;
-    white-space: nowrap;
+  header .top-fly .brand .telly {
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    right: -30%;
+  }
+  header .top-fly .brand .telly i {
+    font-size: 2rem;
   }
   header .top-fly .brand .menu-wrap {
-    display: inline;
+    display: inline-block;
+  }
+  header .top-fly .brand h1 {
+    text-align: center;
+    white-space: nowrap;
   }
   .slide {
     margin: 0;
     width: 100vw;
   }
   .landing {
+    padding: 20px 0;
     margin: 74px 0 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -908,23 +926,23 @@ article i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100vh;
+    height: 100%;
   }
   .landing-split .landing-inner-left {
-    -ms-flex-preferred-size: 1;
-        flex-basis: 1;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
     height: 30%;
     position: relative;
   }
   .landing-split .landing-inner-right {
-    -ms-flex-preferred-size: 2;
-        flex-basis: 2;
+    -ms-flex-preferred-size: 67%;
+        flex-basis: 67%;
   }
   .landing-split .landing-inner-right button {
     display: none;
   }
   .landing-split .landing-inner-right .section-bottom {
-    height: 10vh;
+    height: 100%;
   }
   .about-landing-split {
     display: -webkit-box;
@@ -951,7 +969,7 @@ article i {
   .contact-content {
     height: 100%;
     width: 100%;
-    margin: 2rem;
+    margin: 2rem 0 4rem;
   }
   .contact-content .contact {
     display: -webkit-box;
@@ -996,14 +1014,45 @@ article i {
 }
 
 @media (max-width: 770px) {
+  .top-fly .brand {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .top-fly .brand h1 {
+    font-size: 3rem;
+  }
+  .top-fly .brand .telly {
+    display: block;
+    position: absolute;
+    top: 0%;
+    right: -0%;
+  }
+  .top-fly .brand .telly i {
+    color: white;
+    font-size: 1.7rem;
+  }
+  .top-fly .brand .menu-wrap {
+    position: absolute;
+    top: 27%;
+    left: -37%;
+  }
+  .slide .landing {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
   .about-landing-split .about-landing-right h1 {
     font-size: 2rem;
   }
   .about-landing-split .about-landing-right li {
     font-size: 1.3rem;
   }
-  .contact-content .contact {
-    margin: 0 0 3rem;
+  .contact-content .contact .contact-left form {
+    padding: 0 20px;
+  }
+  .contact-content .contact .contact-left form textarea {
+    width: 100%;
   }
   .contact-content .contact .contact-right {
     display: none;
@@ -1020,59 +1069,93 @@ article i {
 }
 
 @media (max-width: 550px) {
-  .wrapper {
-    overflow-x: hidden;
-  }
   header {
     width: 100vw;
+    -webkit-box-shadow: 0 1px 1px 1px var(--medium-blue);
+            box-shadow: 0 1px 1px 1px var(--medium-blue);
+  }
+  header .top-fly .brand {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   header .top-fly .brand h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  header .top-fly .brand .telly {
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: -20%;
+  }
+  header .top-fly .brand .telly i {
+    color: white;
+    font-size: 1.7rem;
+  }
+  header .top-fly .brand .menu-wrap {
+    position: absolute;
+    top: 10%;
+    left: -25%;
+  }
+  .wrapper {
+    overflow-x: hidden;
   }
   footer {
     font-size: .7rem;
   }
-  article {
+  article .intro {
+    padding: 10px;
     font-size: 1rem;
-    line-height: 1;
+    height: 100%;
+    line-height: 1.2;
     word-spacing: 2px;
-    overflow-y: hidden;
-  }
-  article .fas {
-    display: none;
+    display: block;
   }
   .slide .landing-split button {
     display: none;
   }
-  .landing-split .landing-inner-left {
-    position: relative;
+  .slide .landing-inner-right .section-top {
+    text-align: center;
   }
-  .landing-split .landing-inner-right .section-bottom {
-    padding: 10px 0;
-    overflow: auto;
+  .slide .landing-inner-right .section-bottom {
+    height: 100%;
+    display: block;
+    padding: 30px 10px;
   }
-  .landing-split .landing-inner-right .section-bottom .sub {
+  .slide .landing-inner-right .section-bottom .sub {
     font-size: 1rem;
   }
-  .contact-content .contact-left .message-box button {
+  .about-landing-split .about-landing-right {
+    padding: 30px 10px;
+    color: black;
+  }
+  .about-landing-split .about-landing-right h1 {
+    font-size: 1.7rem;
+    margin: 0 0 .3rem;
+  }
+  .about-landing-split .about-landing-right li {
+    font-size: 1.1rem;
+    color: var(--false-black);
+  }
+  .contact-content .contact .contact-left {
+    padding: 0 10px;
+    width: 100%;
+  }
+  .contact-content .contact .contact-left form {
+    width: 100%;
+  }
+  .contact-content .contact .contact-left form .row {
+    text-align: center;
+  }
+  .contact-content .contact .contact-left form .message-box textarea {
+    width: 100%;
+  }
+  .contact-content .contact .contact-left form .message-box button {
     width: 50%;
   }
-  .contact-right h2 {
+  .contact-content-right {
     display: none;
-  }
-  .contact form {
-    padding: 10px 20px;
-  }
-  .contact-right #map {
-    display: none;
-  }
-  #contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 /*# sourceMappingURL=clean.css.map */

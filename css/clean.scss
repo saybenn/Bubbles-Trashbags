@@ -12,6 +12,7 @@
 
 body {
     font-family: 'Lato', Helvetica, sans-serif;
+    background: var(--false-white);
 }
 
 * {
@@ -43,6 +44,10 @@ header {
             align-items: center;
             background: var(--medium-blue);
             color: white;
+
+            .telly {
+                display: none;
+            }
 
             .menu-wrap {
                 display: none;
@@ -234,8 +239,6 @@ footer {
         background: var(--accent);
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-
 
         h1 {
             color: white;
@@ -296,21 +299,26 @@ footer {
 }
 
 article {
-    height: 29vh;
-    width: 80vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    line-height: 1.5;
-    font-family: 'Lato', sans-serif;
-    
-    i {
-        background: var(--light-blue);
-        border-radius: 50%;
-        padding: 5px;
+    width: 100%;
+    height: 100%;
+        
+    .intro {
+        height: 29vh;
+        width: 80vw;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 1.5;
+        font-family: 'Lato', sans-serif;
+
+        i {
+            background: var(--light-blue);
+            border-radius: 50%;
+            padding: 5px;
+        }
     }
 }
 
@@ -523,8 +531,7 @@ article {
             align-items: center;
 
             form {
-                width: 75%;
-                padding: 20px 30px;
+                width: 100%;
             }
 
             .row {
@@ -597,17 +604,33 @@ article {
         display: flex;
         justify-content: center;
         align-items: center;
+        
         .nav-bar, .call, .brand img {
             display: none;
         }
-        .brand h1 {
-        text-align: center;
-        white-space: nowrap;
-        }
+        .top-fly {
+            .brand {
+                .telly {
+                    display: inline-block;
+                    position: absolute;
+                    top: 35%;
+                    right: -30%;
+                    i {
+                        font-size: 2rem;
+                    }   
+                }
 
-        .top-fly .brand .menu-wrap {
-            display: inline;
+                .menu-wrap {
+                    display: inline-block;
+                }
+
+                h1 {
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
         }
+        
     }
 
     .slide {
@@ -617,6 +640,7 @@ article {
     
     //HOME
     .landing {
+        padding: 20px 0;
         margin: 74px 0 10px;
         display: flex;
         flex-direction: column;
@@ -659,24 +683,24 @@ article {
     .landing-split {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
 
         .landing-inner {
             &-left {
-                flex-basis: 1;
+                flex-basis: 33%;
                 height: 30%;
                 position: relative;
             }
 
             &-right {
-                flex-basis: 2;
+                flex-basis: 67%;
 
                 button {
                     display: none;
                 }
 
                 .section-bottom {
-                    height: 10vh;
+                    height: 100%;
                 }
             }
         }
@@ -686,22 +710,22 @@ article {
     .about-landing-split {
         display: flex;
         flex-direction: column;
-    }
 
-    .about-landing-split .about-landing-left {
+        .about-landing-left {
            height: 20%;
     }
 
-    .about-landing-split .about-landing-right {
-        padding: 15px 0;
-        height: auto;
+        .about-landing-right {
+            padding: 15px 0;
+            height: auto;
 
-        h1 {
-            font-size: 1.5rem;
-        }
+            h1 {
+                font-size: 1.5rem;
+            }
 
-        li {
-            font-size: 1.1rem;
+            li {
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -709,7 +733,7 @@ article {
     .contact-content {
        height: 100%;
        width: 100%;
-       margin: 2rem;
+       margin: 2rem 0 4rem;
 
        .contact {
            display: flex;
@@ -747,6 +771,43 @@ article {
 
 
 @media (max-width: 770px) {
+    .top-fly {
+            .brand {
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            height: 100%;
+                
+                h1 {
+                    font-size: 3rem;
+                }
+                .telly {
+                    display: block;
+                    position: absolute;
+                    top: 0%;
+                    right: -0%;
+
+                    i {
+                        color: white;
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .menu-wrap {
+                    position: absolute;
+                    top: 27%;
+                    left: -37%;
+                }
+            }
+        }
+
+        .slide {
+    .landing {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
         .about-landing-split .about-landing-right h1 {
         font-size: 2rem;
     }
@@ -755,14 +816,23 @@ article {
          font-size: 1.3rem;
      }
 
-     .contact-content .contact {
-         margin: 0 0 3rem;
-     }
-
-     .contact-content .contact .contact-right {
-         display: none;
-     }
+     .contact-content {
+         .contact {
+             .contact-left {
+                 form {
+                     padding: 0 20px;
+                     textarea {
+                         width: 100%;
+                     }
+                 }
+             }
+             .contact-right {
+                display: none;
+             }
+         }
+     } 
 }
+
 @media (max-width: 720px) {
     .landing-split .landing-inner-right .section-bottom {
         padding: 10px 0;
@@ -772,72 +842,132 @@ article {
     }
 
 }
+
 @media (max-width: 550px) {
+//STANDARD
+    header {
+        width: 100vw;
+        box-shadow: 0 1px 1px 1px var(--medium-blue);
+        .top-fly {
+            .brand {
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            height: 100%;
+                
+                h1 {
+                    font-size: 1.8rem;
+                }
+                .telly {
+                    display: block;
+                    position: absolute;
+                    top: 30%;
+                    right: -20%;
+
+                    i {
+                        color: white;
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .menu-wrap {
+                    position: absolute;
+                    top: 10%;
+                    left: -25%;
+                }
+            }
+        }      
+    }
 
     .wrapper {
         overflow-x: hidden;
     }
 
-    header {
-        width: 100vw;
-
-        .top-fly .brand h1{
-            font-size: 2rem;
-        }
-    }
-
     footer {
         font-size: .7rem;
     }
+
+//HOME
     article  {
-        font-size: 1rem;
-        line-height: 1;
-        word-spacing: 2px;
-        overflow-y: hidden;
-
-        .fas {
-            display: none;
-        }        
-    }
-
-    .slide .landing-split {
-        button {
-            display: none;
-        }
-    }
-
-    .landing-split .landing-inner-left {
-        position: relative;
-    }
-
-    
-   .landing-split .landing-inner-right .section-bottom {
-        padding: 10px 0;
-        overflow: auto;
- 
-        .sub {
+        .intro {
+            padding: 10px;
             font-size: 1rem;
+            height: 100%;
+            line-height: 1.2;
+            word-spacing: 2px;
+            display: block;
         }
     }
 
-    .contact-content .contact-left .message-box button {
-        width: 50%;
-    }
-    
-    .contact-right h2 {
-        display: none;
+//COM AND VALET
+    .slide {
+        .landing-split {
+            button {
+                display: none;
+            }
+        }
+
+        .landing-inner-right {
+            .section-top {
+                text-align: center;
+            }
+            .section-bottom {
+                height: 100%;
+                display: block;
+                padding: 30px 10px;
+
+                .sub {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 
-    .contact form {
-        padding: 10px 20px;
+//ABOUT
+    .about-landing-split {
+        .about-landing-right {
+            padding: 30px 10px;
+            color: black;
+
+            h1 {
+                font-size: 1.7rem;
+                margin: 0 0 .3rem;
+            }
+
+            li {
+                font-size: 1.1rem;
+                color: var(--false-black);
+            }
+        }
     }
 
-    .contact-right #map {
-        display: none;
-    }
+//CONTACT
+    .contact-content {
+        .contact {
+            .contact-left {
+                padding: 0 10px;
+                width: 100%;
 
-    #contact {
-        display: flex;
-        justify-content: center;
-    }
+                form {             
+                    width: 100%;
+
+                    .row {
+                        text-align: center;
+                    }
+
+                    .message-box {
+                        textarea {
+                            width: 100%;
+                        }     
+                        button {
+                            width: 50%;
+                        }                  
+                    }
+                }
+            }
+        }
+        &-right {
+            display: none;
+        }
+    } 
 }
