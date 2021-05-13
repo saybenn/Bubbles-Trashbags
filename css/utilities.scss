@@ -1,0 +1,96 @@
+//Buttons
+%btn-shared {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 40px;
+
+    &-transparent {  
+        border: 2px solid white;
+        background: transparent;
+        
+    }   
+}
+
+// Text
+.small {
+    font-size: 1.1rem;
+}
+
+.med {
+    font-size: 1.5rem;
+}
+
+.big {
+    font-size: 2rem;
+}
+
+.xl {
+    font-size: 2.5rem;
+}
+
+.xxl {
+    font-size: 3rem;
+}
+
+
+//MARGIN
+.my- {
+    &1{
+        margin: 1rem 0;
+    }
+    &2{
+        margin: 1.5rem 0;
+    }
+
+    &3{
+        margin: 2rem 0;
+    }
+
+    &b1{
+        margin: 0 0 .5rem;
+    }
+
+    &b2{
+        margin: 0 0 1rem;
+    }
+
+    &b3{
+        margin: 0 0 1.5rem;
+    }
+}
+
+.default {
+    margin: 17vh 0 4vh 0;
+}
+
+//PADDING
+.py- {
+    &1{
+        padding: 1rem 0;
+    }
+    &2{
+        padding: 1.5rem 1rem;
+    }
+
+    &3{
+        padding: 2rem 1rem;
+    }
+
+    &b1{
+        padding: 0 0 1rem;
+    }
+
+    &b2{
+        padding: 0 0 1.5rem;
+    }
+
+    &b3{
+        padding: 0 0 2rem;
+    }
+}
