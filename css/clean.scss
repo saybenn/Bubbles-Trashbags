@@ -900,6 +900,30 @@ article {
     }
 
 //HOME
+    .landing {
+        &-right {
+            display: grid;
+            grid-template-areas:
+            'header header'
+            'top bottom';
+            text-align: center;
+
+            h1 {
+                grid-area: header;
+                text-align: center;
+            }
+            
+            .bubble {
+                &-top{
+                    grid-area: top;
+                }
+
+                &-bottom {
+                    grid-area: bottom;
+                }
+            }
+        }
+    }
     article  {
         .intro {
             padding: 10px;

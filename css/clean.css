@@ -1116,6 +1116,29 @@ article .intro i {
   footer {
     font-size: .7rem;
   }
+  .landing-right {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'header header' 'top bottom';
+    text-align: center;
+  }
+  .landing-right h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+    text-align: center;
+  }
+  .landing-right .bubble-top {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: top;
+  }
+  .landing-right .bubble-bottom {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: bottom;
+  }
   article .intro {
     padding: 10px;
     font-size: 1rem;
