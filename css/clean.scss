@@ -894,6 +894,23 @@ article {
 
     footer {
         font-size: .7rem;
+        .left-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .middle-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
     }
 
 //HOME
@@ -943,6 +960,7 @@ article {
 
 //ABOUT
     .about-landing-split {
+        height: 100%;
         .about-landing-right {
             padding: 30px 10px 0;
             color: black;
@@ -961,6 +979,7 @@ article {
 
 //CONTACT
     .contact-content {
+        height: 100%;
         .contact {
             .contact-left {
                 padding: 0 10px;
@@ -983,10 +1002,10 @@ article {
                     }
                 }
             }
-        }
-        &-right {
+            &-right {
             display: none;
-        }
+            }
+        }     
     } 
 }
 
@@ -1001,13 +1020,13 @@ article {
 
                 h1 {
                     font-size: 1.6rem;
-                    margin-left: .7rem;
+                    margin-left: 0;
                 }
 
                 .menu-wrap {
                     position: absolute;
-                    top: 4%;
-                    left: 110%;
+                    top: 11%;
+                    left: 115%;
                 }
 
                 .telly {
@@ -1045,9 +1064,14 @@ article {
                             display: none;
                         }
                     }
-                }
-               
+                }             
             }
+        }
+    }
+
+    .about-landing-split {
+        .about-landing-right {
+            height: 100%;
         }
     }
 

@@ -1076,6 +1076,39 @@ article .intro i {
   footer {
     font-size: .7rem;
   }
+  footer .left-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .middle-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .right-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .landing-right {
     text-align: center;
   }
@@ -1104,6 +1137,9 @@ article .intro i {
   .slide .landing-inner-right .section-bottom .sub {
     font-size: 1rem;
   }
+  .about-landing-split {
+    height: 100%;
+  }
   .about-landing-split .about-landing-right {
     padding: 30px 10px 0;
     color: black;
@@ -1115,6 +1151,9 @@ article .intro i {
   .about-landing-split .about-landing-right li {
     font-size: 1.1rem;
     color: var(--false-black);
+  }
+  .contact-content {
+    height: 100%;
   }
   .contact-content .contact .contact-left {
     padding: 0 10px;
@@ -1132,7 +1171,7 @@ article .intro i {
   .contact-content .contact .contact-left form .message-box button {
     width: 50%;
   }
-  .contact-content-right {
+  .contact-content .contact-right {
     display: none;
   }
 }
@@ -1147,12 +1186,12 @@ article .intro i {
   }
   header .top-fly .brand h1 {
     font-size: 1.6rem;
-    margin-left: .7rem;
+    margin-left: 0;
   }
   header .top-fly .brand .menu-wrap {
     position: absolute;
-    top: 4%;
-    left: 110%;
+    top: 11%;
+    left: 115%;
   }
   header .top-fly .brand .telly {
     position: absolute;
@@ -1189,6 +1228,9 @@ article .intro i {
   }
   .slide .landing-right .service-links a img {
     display: none;
+  }
+  .about-landing-split .about-landing-right {
+    height: 100%;
   }
   footer .left-footer p {
     font-size: .5rem;
