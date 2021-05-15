@@ -674,25 +674,8 @@ article {
         }
 
         &-right {
-            display: grid;
-            grid-template-areas:
-            'header header'
-            'top bottom';
-            text-align: center;
-
             h1 {
-                grid-area: header;
                 text-align: center;
-            }
-            
-            .bubble {
-                &-top{
-                    grid-area: top;
-                }
-
-                &-bottom {
-                    grid-area: bottom;
-                }
             }
         }
     }
@@ -1035,14 +1018,14 @@ article {
 
                 .menu-wrap {
                     position: absolute;
-                    top: 18%;
-                    left: 125%;
+                    top: 4%;
+                    left: 110%;
                 }
 
                 .telly {
                     position: absolute;
-                    top: 38%;
-                    left: 110%;
+                    top: 35%;
+                    left: 95%;
                 }
             }
         }
@@ -1053,6 +1036,9 @@ article {
 
             &-right {
                 height: auto;
+                width: 100vw;
+                padding: 1.5rem 0;
+                margin: 0 auto;
 
                 h1 {
                     width: 100%;
@@ -1064,12 +1050,15 @@ article {
                     width: 100vw;
                     flex-direction: row;
                     justify-content: center;
-                }
-                a {
-                    img {
-                        display: none;
+                    
+                    a {
+                        flex-basis: 50%;
+                        img {
+                            display: none;
+                        }
                     }
                 }
+               
             }
         }
     }

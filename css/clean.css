@@ -923,28 +923,8 @@ article .intro i {
   .landing-left {
     padding: 30px 0;
   }
-  .landing-right {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: 'header header' 'top bottom';
-    text-align: center;
-  }
   .landing-right h1 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: header;
     text-align: center;
-  }
-  .landing-right .bubble-top {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: top;
-  }
-  .landing-right .bubble-bottom {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: bottom;
   }
   article {
     height: auto;
@@ -1219,19 +1199,22 @@ article .intro i {
   }
   header .top-fly .brand .menu-wrap {
     position: absolute;
-    top: 18%;
-    left: 125%;
+    top: 4%;
+    left: 110%;
   }
   header .top-fly .brand .telly {
     position: absolute;
-    top: 38%;
-    left: 110%;
+    top: 35%;
+    left: 95%;
   }
   .slide .landing {
     margin: 60px 0 10px;
   }
   .slide .landing-right {
     height: auto;
+    width: 100vw;
+    padding: 1.5rem 0;
+    margin: 0 auto;
   }
   .slide .landing-right h1 {
     width: 100%;
@@ -1248,7 +1231,11 @@ article .intro i {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .slide .landing-right a img {
+  .slide .landing-right .service-links a {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .slide .landing-right .service-links a img {
     display: none;
   }
   footer .left-footer p {
