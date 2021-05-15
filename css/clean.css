@@ -895,8 +895,11 @@ article .intro i {
   header .top-fly .brand .telly {
     display: inline-block;
     position: absolute;
-    top: 35%;
-    left: -30%;
+    top: 30%;
+    left: -40%;
+    color: white;
+    padding: 10px 50px;
+    border: 3px solid white;
   }
   header .top-fly .brand .telly i {
     font-size: 2rem;
@@ -904,8 +907,8 @@ article .intro i {
   header .top-fly .brand .menu-wrap {
     display: inline-block;
     position: absolute;
-    top: 35%;
-    left: 0%;
+    top: 30%;
+    left: 225%;
   }
   header .top-fly .brand h1 {
     text-align: center;
@@ -982,7 +985,7 @@ article .intro i {
   }
   .about-landing-split .about-landing-right {
     padding: 15px 0;
-    height: auto;
+    height: 100%;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }

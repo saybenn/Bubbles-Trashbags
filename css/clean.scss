@@ -639,8 +639,11 @@ article {
                 .telly {
                     display: inline-block;
                     position: absolute;
-                    top: 35%;
-                    left: -30%;
+                    top: 30%;
+                    left: -40%;
+                    color: white;
+                    padding: 10px 50px;
+                    border: 3px solid white;
                     i {
                         font-size: 2rem;
                     }   
@@ -649,8 +652,8 @@ article {
                 .menu-wrap {
                     display: inline-block;
                     position: absolute;
-                    top: 35%;
-                    left: 0%;
+                    top: 30%;
+                    left: 225%;
                 }
 
                 h1 {
@@ -734,7 +737,7 @@ article {
 
         .about-landing-right {
             padding: 15px 0;
-            height: auto;
+            height: 100%;
             flex-basis: 50%;
 
             h1 {
