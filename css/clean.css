@@ -874,7 +874,7 @@ article .intro i {
   margin-bottom: 10px;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1025px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -889,17 +889,23 @@ article .intro i {
   header .nav-bar, header .call, header .brand img {
     display: none;
   }
+  header .top-fly .brand {
+    position: relative;
+  }
   header .top-fly .brand .telly {
     display: inline-block;
     position: absolute;
     top: 35%;
-    right: -30%;
+    left: -30%;
   }
   header .top-fly .brand .telly i {
     font-size: 2rem;
   }
   header .top-fly .brand .menu-wrap {
     display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: 0%;
   }
   header .top-fly .brand h1 {
     text-align: center;
@@ -925,6 +931,9 @@ article .intro i {
   }
   .landing-right h1 {
     text-align: center;
+  }
+  .landing-right h1 a {
+    font-size: 1.5rem;
   }
   article {
     height: auto;
@@ -966,11 +975,16 @@ article .intro i {
             flex-direction: column;
   }
   .about-landing-split .about-landing-left {
-    height: 20%;
+    height: 100%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height: 100%;
   }
   .about-landing-split .about-landing-right {
     padding: 15px 0;
     height: auto;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .about-landing-split .about-landing-right h1 {
     font-size: 1.5rem;
@@ -1025,57 +1039,7 @@ article .intro i {
   }
 }
 
-@media (max-width: 770px) {
-  .top-fly .brand {
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .top-fly .brand h1 {
-    font-size: 3rem;
-  }
-  .top-fly .brand .telly {
-    display: block;
-    position: absolute;
-    top: 0%;
-    right: -0%;
-  }
-  .top-fly .brand .telly i {
-    color: white;
-    font-size: 1.7rem;
-  }
-  .slide .landing {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .about-landing-split .about-landing-right h1 {
-    font-size: 2rem;
-  }
-  .about-landing-split .about-landing-right li {
-    font-size: 1.3rem;
-  }
-  .contact-content .contact .contact-left form {
-    padding: 0 20px;
-  }
-  .contact-content .contact .contact-left form textarea {
-    width: 100%;
-  }
-  .contact-content .contact .contact-right {
-    display: none;
-  }
-}
-
-@media (max-width: 720px) {
-  .landing-split .landing-inner-right .section-bottom {
-    padding: 10px 0;
-    height: 0;
-    display: block;
-    overflow: auto;
-  }
-}
-
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   header {
     width: 100vw;
     -webkit-box-shadow: 0 1px 1px 1px var(--medium-blue);
@@ -1088,14 +1052,19 @@ article .intro i {
     margin: 0;
   }
   header .top-fly .brand h1 {
-    font-size: 1.3rem;
+    font-size: 3rem;
     margin: 0;
+  }
+  header .top-fly .brand .menu-wrap {
+    position: absolute;
+    top: 20%;
+    left: 120%;
   }
   header .top-fly .brand .telly {
     display: block;
     position: absolute;
-    top: 30%;
-    right: -20%;
+    top: 35%;
+    left: 110%;
   }
   header .top-fly .brand .telly i {
     color: white;
@@ -1108,27 +1077,10 @@ article .intro i {
     font-size: .7rem;
   }
   .landing-right {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: 'header header' 'top bottom';
     text-align: center;
   }
   .landing-right h1 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: header;
     text-align: center;
-  }
-  .landing-right .bubble-top {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: top;
-  }
-  .landing-right .bubble-bottom {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: bottom;
   }
   article .intro {
     padding: 10px;
@@ -1153,7 +1105,7 @@ article .intro i {
     font-size: 1rem;
   }
   .about-landing-split .about-landing-right {
-    padding: 30px 10px;
+    padding: 30px 10px 0;
     color: black;
   }
   .about-landing-split .about-landing-right h1 {
@@ -1185,7 +1137,7 @@ article .intro i {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   header .top-fly {
     width: 100vw;
   }
