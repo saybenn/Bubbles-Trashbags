@@ -340,7 +340,7 @@ footer .right-footer a:first-child {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  height: 47vh;
+  height: 49vh;
   font-family: 'Lato', sans-serif;
 }
 
@@ -459,7 +459,7 @@ footer .right-footer a:first-child {
 }
 
 .landing-right .service-links .bubble-top img {
-  width: 30%;
+  width: 25%;
   border-radius: 50%;
 }
 
@@ -492,7 +492,7 @@ footer .right-footer a:first-child {
 }
 
 .landing-right .service-links .bubble-bottom img {
-  width: 30%;
+  width: 25%;
   border-radius: 50%;
 }
 
@@ -515,7 +515,7 @@ article {
 }
 
 article .intro {
-  height: 33vh;
+  height: 31vh;
   width: 80vw;
   margin: 0px auto;
   display: -webkit-box;
