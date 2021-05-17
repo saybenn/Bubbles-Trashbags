@@ -272,7 +272,7 @@ footer {
                     transition: all .3s ease-in-out;
 
                     img {
-                        width: 25%;
+                        width: 23%;
                         border-radius: 50%;
                     }
 
@@ -297,7 +297,7 @@ footer {
                     transition: all .3s ease-in-out;
 
                     img {
-                        width: 25%;
+                        width: 23%;
                         border-radius: 50%;
                     }
 
@@ -575,6 +575,10 @@ article {
                     &:focus {
                         outline: none;
                     }
+                }
+
+                input {
+                    padding: 2px 3px;
                 }
                 
             }

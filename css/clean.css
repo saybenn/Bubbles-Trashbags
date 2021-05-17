@@ -459,7 +459,7 @@ footer .right-footer a:first-child {
 }
 
 .landing-right .service-links .bubble-top img {
-  width: 25%;
+  width: 23%;
   border-radius: 50%;
 }
 
@@ -492,7 +492,7 @@ footer .right-footer a:first-child {
 }
 
 .landing-right .service-links .bubble-bottom img {
-  width: 25%;
+  width: 23%;
   border-radius: 50%;
 }
 
@@ -837,6 +837,10 @@ article .intro i {
 
 .contact-content .contact-left form input:focus, .contact-content .contact-left form textarea:focus {
   outline: none;
+}
+
+.contact-content .contact-left form input {
+  padding: 2px 3px;
 }
 
 .contact-content .contact-left .row {
