@@ -831,7 +831,7 @@ article .intro i {
 }
 
 .contact-content .contact-left form input, .contact-content .contact-left form textarea {
-  border: 1px solid black;
+  border: 1.8px solid black;
   width: 100%;
 }
 
@@ -847,6 +847,10 @@ article .intro i {
       justify-content: space-around;
 }
 
+.contact-content .contact-left .column {
+  margin: .5rem 1rem;
+}
+
 .contact-content .contact-left .column, .contact-content .contact-left .message-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -859,13 +863,16 @@ article .intro i {
           flex-direction: column;
   text-align: left;
   width: 100%;
-  margin: .5rem 1rem;
+}
+
+.contact-content .contact .message-box {
+  margin: 0 1rem;
 }
 
 .contact-content .contact .message-box button {
   display: block;
   border: 3px solid black;
-  width: 30%;
+  width: 35%;
   font-weight: bold;
   padding: 5px 30px;
 }
@@ -1088,7 +1095,7 @@ article .intro i {
   }
   .contact-content .contact-left form textarea {
     border: 1px solid black;
-    margin-bottom: 1rem;
+    width: 95%;
   }
   .contact-content .contact-left form label {
     font-weight: bold;
@@ -1369,6 +1376,10 @@ article .intro i {
   }
   .about-landing-split .about-landing-right {
     height: 100%;
+  }
+  .contact-contact .contact-left form .message-box textarea {
+    width: 80%;
+    margin: 0;
   }
   footer .left-footer p {
     font-size: .5rem;

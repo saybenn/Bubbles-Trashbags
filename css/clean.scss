@@ -569,7 +569,7 @@ article {
                 }
 
                 input, textarea {
-                    border: 1px solid black;
+                    border: 1.8px solid black;
                     width: 100%;
 
                     &:focus {
@@ -584,21 +584,25 @@ article {
                 justify-content: space-around;
             }
 
+            .column {
+                margin: .5rem 1rem;
+            }
+
             .column, .message-box {
                 display: flex;
                 flex-basis: 50%;
                 flex-direction: column;
                 text-align: left;
                 width: 100%;
-                margin: .5rem 1rem;
                 }
             }
 
             .message-box {
+                margin: 0 1rem;
                 button {
                     display: block;
                     border: 3px solid black;
-                    width: 30%;
+                    width: 35%;
                     font-weight: bold;
                     padding: 5px 30px;
                 }
@@ -811,7 +815,7 @@ article {
                     }
                         textarea {
                             border: 1px solid black;    
-                            margin-bottom: 1rem ;
+                            width: 95%;
                         }
                     label {
                         font-weight: bold;
@@ -1166,6 +1170,21 @@ article {
     .about-landing-split {
         .about-landing-right {
             height: 100%;
+        }
+    }
+
+    .contact-contact {
+        .contact {
+            &-left {
+                form {
+                    .message-box {
+                        textarea {
+                            width: 80%;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 
