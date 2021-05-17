@@ -1080,8 +1080,8 @@ article .intro i {
     height: 100%;
   }
   .contact-content .contact-left {
-    -webkit-box-shadow: 2px 2px 10px 10px #5a5a5a;
-            box-shadow: 2px 2px 10px 10px #5a5a5a;
+    -webkit-box-shadow: 2px 2px 10px 2px #5a5a5a;
+            box-shadow: 2px 2px 10px 2px #5a5a5a;
     padding: 30px 20px;
     border-radius: 45px;
     background: #f7f7f7;
@@ -1359,17 +1359,12 @@ article .intro i {
   }
   .slide .landing-right .service-links {
     width: 100vw;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: block;
   }
   .slide .landing-right .service-links a {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    font-size: 1.3rem;
   }
   .slide .landing-right .service-links a img {
     display: none;
