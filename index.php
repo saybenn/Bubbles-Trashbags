@@ -177,31 +177,31 @@
                     <h1 class="my-b2 xl">CONTACT US</h1>
                     <div class="contact">
                         <div class="contact-left">
-                            <form>
+                            <form method='post' action='mailer.php'>
                                 <div class="row">
                                     <div class="column">
                                         <label class="my-b1" for="name">Name</label>
-                                    <input class="my-b1" class="my-b1" type="text" id="name" placeholder="Enter your name...">
+                                    <input class="my-b1" class="my-b1" name="name" type="text" id="name" placeholder="Enter your name...">
                                     </div>
                                     <div class="column">
                                         <label class="my-b1" for="phone">Phone </label>
-                                        <input class="my-b1" type="tel" id="phone" placeholder="Enter your phone number...">
+                                        <input class="my-b1" name="phone" type="tel" id="phone" placeholder="Enter your phone number...">
                                     </div>  
                                 </div>
                                 <div class="row">
                                     <div class="column">
                                         <label class="my-b1" for="subject">Subject</label>
-                                        <input class="my-b1" type="text" id="subject" placeholder="Enter subject message...">
+                                        <input class="my-b1" name="subject" type="text" id="subject" placeholder="Enter subject message...">
                                     </div>
                                     <div class="column">
                                         <label class="my-b1" for="email">Email</label>
-                                        <input class="my-b1" type="email" id="email" placeholder="Enter your email...">
+                                        <input class="my-b1" name="email" type="email" id="email" placeholder="Enter your email...">
                                     </div>     
                                 </div>
                                 <div class="message-box">
                                     <label class="my-b1" for="message">Message</label>
                                     <textarea class="my-b3" name="message" id="message" cols="30" rows="5" placeholder="Enter your message..."></textarea>
-                                    <button class="btn btn-transparent" type="submit">Send</button>
+                                    <button class="btn btn-transparent" value="submit" type="submit">Send</button>
                                 </div>
                             </form>
                         </div>
