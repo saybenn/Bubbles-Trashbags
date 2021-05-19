@@ -64,13 +64,13 @@ if(isset($_POST['submit'])) {
 
     //send email
     if ($mail ->Send()) {
-        echo 'Mail Sent';
+            header("Location: index.php?mand");
+
     } else {
-        echo 'Error';
+            header("Location: index.php?mailsend");
     }
     //close smtp connection
     $mail ->smtpClose();
-    header("Location: index.php?mailsend");
 }
 ?>
 
