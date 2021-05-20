@@ -4,7 +4,7 @@
 :root {
     --dark-blue: #31708E;
     --medium-blue: #5085A5;
-    --light-blue: #97bbd3;
+    --light-blue: #76a5c7;
     --false-white: #eeeeee;
     --accent:  #687864;
     --false-black: rgb(41, 41, 41);
@@ -25,7 +25,7 @@ body {
 header {
     position: fixed;
     top: 0;
-    background: var(--medium-blue);
+    background: var(--light-blue);
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ header {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            background: var(--medium-blue);
+            background: var(--light-blue);
             color: white;
 
             .telly {
@@ -57,7 +57,7 @@ header {
 
         .call {
             flex-basis: 62%;
-            background: var(--dark-blue);
+            background: var(--medium-blue);
             border-radius: 0 0 0 10px;
             position: relative;
 
@@ -81,7 +81,7 @@ header {
     }
 
     nav {
-        background: var(--medium-blue);
+        background: var(--light-blue);
         height: 7vh;
 
         ul {
@@ -251,7 +251,6 @@ footer {
 
         h1 {
             color: white;
-            margin: 0;
         }
 
         .service-links {
@@ -264,7 +263,7 @@ footer {
 
             .bubble- {
                 &top {
-                    width: 100%;
+                    width: 60%;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
@@ -272,7 +271,7 @@ footer {
                     transition: all .3s ease-in-out;
 
                     img {
-                        width: 23%;
+                        width: 30%;
                         border-radius: 50%;
                     }
 
@@ -289,7 +288,7 @@ footer {
                 }
 
                 &bottom {
-                    width: 100%;
+                    width: 60%;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
@@ -297,7 +296,7 @@ footer {
                     transition: all .3s ease-in-out;
 
                     img {
-                        width: 23%;
+                        width: 30%;
                         border-radius: 50%;
                     }
 
@@ -330,13 +329,16 @@ article {
         justify-content: center;
         align-items: center;
         text-align: center;
-        line-height: 1.5;
         font-family: 'Lato', sans-serif;
-
+ 
         i {
             background: var(--light-blue);
             border-radius: 50%;
             padding: 5px;
+        }
+
+        p {
+            font-size: 1.2rem;
         }
     }
 }
@@ -391,19 +393,19 @@ article {
             align-items: center;
             height: 100%;
             width: 100%;
-            line-height: 1.4;
+            color: white;
 
             .section {
                 &-top {
                     height: 100%;
                     width: 100%;
-                    flex-basis: 35%;
+                    flex-basis: 45%;
                     background: var(--accent);
                     padding: 2rem 4rem;
                     position: relative;
 
                     p {
-                        color: var(--false-black);
+                        opacity: .8;
                     }
 
                     button {
@@ -411,7 +413,7 @@ article {
                         border: 3px solid white;
                         position: absolute;
                         bottom: 10%;
-                        right: 15%;
+                        right: 79%;
                         font-size: 1.1rem;
                         opacity: .9;
                         transition: all .3s ease-in-out;
@@ -428,12 +430,12 @@ article {
                     }
 
                 }
-
+ 
                 &-bottom {
                     height: 100%;
                     width: 100%;
                     background: var(--medium-blue);
-                    flex-basis:65%;
+                    flex-basis: 55%;
                     padding: 3rem 4rem;
                     display: flex;
                     flex-direction: column;
@@ -444,6 +446,11 @@ article {
                         display: flex;
                         align-items: center;
 
+                        p {
+                            text-align: left;
+                            opacity: .8;
+                        }
+
                         .sub {
                             overflow: hidden;
                         }
@@ -452,7 +459,7 @@ article {
                             background: black;
                             height: 80%;
                             width: 5px;
-                            margin: 0 7px;
+                            margin: 0 2rem;
                         }
                     }
                 }
@@ -520,6 +527,7 @@ article {
                     padding: 0 2.5rem;
                     list-style: none;
                     text-align: center;
+                    opacity: .8;
                 }
             }
         }
